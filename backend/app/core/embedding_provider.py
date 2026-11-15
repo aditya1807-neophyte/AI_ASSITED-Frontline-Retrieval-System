@@ -10,10 +10,11 @@ Features:
 - Does not regenerate embeddings unnecessarily
 """
 
+from __future__ import annotations
 import os
 import logging
 import hashlib
-from typing import Optional, List, Any
+from typing import Optional, List, Any, Dict
 from pathlib import Path
 
 from app.core.config import get_settings

@@ -45,6 +45,18 @@ class AuditEventService:
         return items, total
 
     @staticmethod
+    def get_all_by_filters(db: Session, skip: int = 0, limit: int = 100, **filters) -> tuple:
+        """Retrieve audit events with optional filters."""
+        query = db.query(AuditEvent)
+        if "action" in filters and filters["action"]:
+            query = query.filter(AuditEvent.action == filters["action"])
+        if "target_type" in filters and filters["target_type"]:
+            query = query.filter(AuditEvent.target_type == filters["target_type"])
+        total = query.count()
+        items = query.order_by(AuditEvent.created_at.desc()).offset(skip).limit(limit).all()
+        return items, total
+
+    @staticmethod
     def create(db: Session, data: AuditEventCreate) -> AuditEvent:
         """Create a new audit event."""
         return AuditEventRepository.create(db, data)

@@ -4,7 +4,8 @@ FastAPI routers for audit events API endpoints.
 Phase 3 — Audit event API routes.
 """
 
-from typing import List
+from __future__ import annotations
+from typing import List, Optional, Dict, Any
 from fastapi import APIRouter, Depends, HTTPException, status, Query
 from sqlalchemy.orm import Session
 from app.core.database import get_db
