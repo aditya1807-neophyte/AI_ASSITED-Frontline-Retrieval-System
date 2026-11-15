@@ -9,8 +9,17 @@ from typing import Optional, List, Dict, Any
 from pydantic import BaseModel, Field
 
 from app.schemas.pagination import PageWithMeta
+from app.schemas.document import DocumentCreate, DocumentBase
 
 from enum import Enum
+
+
+class DocumentSearchResult(BaseModel):
+    id: int
+    title: str
+    content: Optional[str] = None
+    topic: Optional[str] = None
+    similarity_score: Optional[float] = None
 
 
 class DocumentType(str, Enum):

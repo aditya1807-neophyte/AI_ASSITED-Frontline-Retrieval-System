@@ -4,8 +4,11 @@ Business logic and orchestration layer for audit event operations.
 Phase 3 — Audit event service.
 """
 
+from __future__ import annotations
 from typing import Optional, List, Dict, Any
+from datetime import datetime
 from sqlalchemy.orm import Session
+from app.models import AuditEvent
 from app.repositories.audit_events import AuditEventRepository
 from app.schemas.audit_events import AuditEventCreate, AuditEventPublic
 
