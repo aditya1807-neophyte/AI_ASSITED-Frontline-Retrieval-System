@@ -1,0 +1,40 @@
+# Node dependencies & build artifacts
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+
+# Python & virtual environments
+backend/.venv/
+.venv/
+venv/
+__pycache__/
+*/__pycache__/
+backend/**/__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# OS and logs
+.DS_Store
+*.log
+backend/server.log
+
+# Uploads and temporary files
+backend/data/uploads/*
+!backend/data/uploads/.gitkeep
+backend/data/documents/*
+!backend/data/documents/.gitkeep
+
+# Track frontline.db for initial deployment
+!backend/data/frontline.db

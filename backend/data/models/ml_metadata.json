@@ -1,0 +1,47 @@
+{
+  "model_name": "FrontlineIntentClassifier-v1.0",
+  "architecture": "TF-IDF + Calibrated Multi-Task Linear Models",
+  "features": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "vocabulary_size": 686,
+    "sublinear_tf": true
+  },
+  "metrics": {
+    "intent_accuracy": 0.7719298245614035,
+    "role_accuracy": 0.8421052631578947,
+    "training_samples": 57
+  },
+  "supported_intents": [
+    "chemical_spill_containment",
+    "confined_space_rescue",
+    "emergency_escalation",
+    "equipment_calibration",
+    "fall_protection_harness",
+    "hazard_safety_ppe",
+    "high_voltage_isolation",
+    "hot_work_fire_watch",
+    "lockout_tagout",
+    "missing_guidance_unsupported",
+    "pressure_relief_testing"
+  ],
+  "supported_roles": [
+    "field_technician",
+    "maintenance_engineer",
+    "operations_analyst",
+    "safety_officer",
+    "site_supervisor"
+  ],
+  "supported_topics": [
+    "compliance",
+    "electrical",
+    "emergency",
+    "mechanical",
+    "operations",
+    "safety"
+  ],
+  "trained_at": "2026-11-05T05:02:30.196534+00:00",
+  "status": "ready"
+}

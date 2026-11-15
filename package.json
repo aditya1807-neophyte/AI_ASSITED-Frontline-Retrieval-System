@@ -1,0 +1,14 @@
+{
+  "name": "frontline-retrieval-workspace",
+  "version": "0.1.0",
+  "description": "AI-Assisted Frontline Document and Knowledge Retrieval Workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev:frontend",
+    "install:all": "npm install --prefix frontend && cd backend && pip install -r requirements.txt",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:backend": "cd backend && uv run uvicorn app.main:app --reload",
+    "start": "npm run dev:frontend"
+  },
+  "license": "MIT"
+}

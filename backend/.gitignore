@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.env.local
+*.log
+.DS_Store
+
+# Data files
+data/uploads/*
+!data/uploads/.gitkeep
+data/documents/*
+!data/documents/.gitkeep
+
+# Allow frontline.db
+!data/frontline.db
